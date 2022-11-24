@@ -1,0 +1,20 @@
+[
+    {
+        "codigo":"0001",
+        "nombre":"Televisor LG 55'",
+        "precioU":"700",
+        "estado":true
+    },
+    {
+        "codigo":"0002",
+        "nombre":"Refrigeradora Mabe",
+        "precioU":"800",
+        "estado":true
+    },
+    {
+        "codigo":"0003",
+        "nombre":"Cocina Mabe",
+        "precioU":"560",
+        "estado":true
+    }
+]

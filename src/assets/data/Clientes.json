@@ -1,0 +1,22 @@
+[
+    {
+        "cedula":"06023432",
+        "nombres":"Manuel Ortíz",
+        "direccion":"Salinas",
+        "telefono":"098324"
+   
+    },
+    {
+        "cedula":"24234324",
+        "nombres":"Rosa Sánchez",
+        "direccion":"Santa elena",
+        "telefono":"0932434"
+    },
+    {
+        "cedula":"12345678",
+        "nombres":"Alicia Contreras",
+        "direccion":"Santa elena",
+        "telefono":"09821434"
+    }
+
+]

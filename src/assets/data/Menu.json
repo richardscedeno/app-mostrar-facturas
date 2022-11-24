@@ -1,0 +1,17 @@
+[
+  {
+      "icono":"albums",
+      "nombre":"Productos",
+      "pagina":"/productos"
+  },
+  {
+      "icono":"person",
+      "nombre":"Clientes",
+      "pagina":"/clientes"
+  },
+  {
+      "icono":"list",
+      "nombre":"Mostrar Factura",
+      "pagina":"/facturas"
+  }
+]

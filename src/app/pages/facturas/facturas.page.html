@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">Facturas</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit)="searchFac()">
+      <ion-item class="numero-factura">
+        <ion-label>Número de factura:</ion-label>
+        <ion-input type="text"
+                   name="numFac"
+                   placeholder="Insert here"
+                   [(ngModel)]="nFactura"
+                   required
+        ></ion-input>
+      </ion-item>
+      <ion-button class="btn-search" type="submit">Buscar</ion-button>
+  </form>
+
+  <div *ngFor="let data of facturaEncontrada">
+    <ion-grid class="content-header">
+      <ion-row class="header-fac">
+        <ion-col size="10"> 
+          <ion-row>
+            <ion-col size="3" class="data-title">
+              <ion-row>Nombre:</ion-row>
+              <ion-row>Dirección:</ion-row>
+            </ion-col>
+            <ion-col class="data-resp">
+              <ion-row>{{data.Cliente.nombres}}</ion-row>
+              <ion-row>{{data.Cliente.direccion}}</ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row class="data-tel">
+            <ion-col class="tel">Teléfono:</ion-col>
+            <ion-col class="tel-number">{{data.Cliente.telefono}}</ion-col>
+            <ion-col class="ced">Cedula:</ion-col>
+            <ion-col class="ced-number">{{data.Cliente.cedula}}</ion-col>
+          </ion-row>
+        </ion-col>
+
+        <ion-col class="fecha">
+          <ion-row>{{data.numFac}}</ion-row>
+          <ion-row class="fecha-bold">No. Fact</ion-row>
+          <ion-row>{{data.fechaFac}}</ion-row>
+          <ion-row class="fecha-bold">Fecha</ion-row>
+        </ion-col>
+      </ion-row>    
+    </ion-grid>
+
+    <ion-grid class="content-detail">
+      <div>
+        <ion-row class="detail">
+          <ion-col>Código</ion-col>
+          <ion-col size="4">Nombre</ion-col>
+          <ion-col size="2">Precio</ion-col>
+          <ion-col size="2">Cantidad</ion-col>
+          <ion-col size="2">Total</ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let detail of data.detalleFactura">
+          <ion-col class="det-fac">{{detail.Producto.codigo}}</ion-col>
+          <ion-col class="det-fac" size="4">{{detail.Producto.nombre}}</ion-col>
+          <ion-col class="det-fac" size="2">$ {{detail.Producto.precioU}}</ion-col>
+          <ion-col class="det-fac" size="2">{{detail.cantidad}}</ion-col>
+          <ion-col class="det-fac" size="2">$ {{detail.total}}</ion-col>
+        </ion-row>
+      </div>
+
+      <ion-row>
+        <ion-col class="data-total">
+          <ion-row>Subtotal</ion-row>
+          <ion-row>IVA (12%)</ion-row>
+          <ion-row>Total</ion-row>
+        </ion-col>
+        <ion-col size="2" class="data-detail">
+          <ion-row>$ {{data.subTotalFac}}</ion-row>
+          <ion-row>$ {{data.ivaFac}}</ion-row>
+          <ion-row>$ {{data.totalFac}}</ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

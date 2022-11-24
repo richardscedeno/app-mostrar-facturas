@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="warning">
+    <ion-title>modalCliente</ion-title>
+
+    <ion-buttons slot="end" (click)="close()">
+      <ion-icon class="close_icon"  name="close-circle"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit)="save()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Cedula:</ion-label>
+        <ion-input type="text"
+                   name="cedula"
+                   [(ngModel)]="objCliente.cedula"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombres:</ion-label>
+        <ion-input type="text"
+                   name="nombres"
+                   [(ngModel)]="objCliente.nombres"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Direccion:</ion-label>
+        <ion-input type="text"
+                   name="direccion"
+                   [(ngModel)]="objCliente.direccion"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Telefono:</ion-label>
+        <ion-input type="text"
+                   name="telefono"
+                   [(ngModel)]="objCliente.telefono"
+                   required
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button color="success" class="btn-guardar" type="submit" [disabled]="formulario.invalid">Guardar</ion-button>
+  </form>
+</ion-content>

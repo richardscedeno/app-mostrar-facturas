@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">Productos</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header class="header_products">
+    <ion-label>CODIGO</ion-label>
+    <ion-label>NOMBRE</ion-label>
+    <ion-label>PRECIO</ion-label>
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of listaProductos | async" class="list_products">
+    <ion-label text-wrap>{{item.codigo}}</ion-label>
+    <ion-label text-wrap>{{item.nombre}}</ion-label>
+    <ion-label text-wrap>{{item.precioU}}</ion-label>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,130 @@
+* {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Estilos para el search
+
+form {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.numero-factura {
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  outline: none;
+}
+
+.numero-factura > ion-label {
+  font-weight: bold;
+}
+
+.numero-factura > ion-input {
+  color: gray;
+}
+
+// Estilos para la cabecera de la factura
+
+.content-header {
+  padding: 10px;
+}
+
+.header-fac {
+  border: 1px solid gray;
+  border-radius: 10px;
+  background: mediumaquamarine;
+}
+
+.data-title {
+  border-top-left-radius: 10px;
+  padding: 5px 0 0 5px;
+  font-weight: bold;
+}
+
+.data-resp {
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.tel {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.ced {
+  font-weight: bold;
+}
+
+.fecha {
+  background-color: pink;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fecha-bold {
+  font-weight: bold;
+}
+
+
+
+// Estilos del contenido de la factura
+.content-detail {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail {
+  background: mediumaquamarine;
+  font-weight: bold;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  text-align: center;
+}
+
+
+
+// Estilos para detalles de la factura
+.det-fac {
+  // color: green;
+  text-align: center;
+}
+
+
+// Estilos de totales y subtotales
+.data-total {
+  background: mediumaquamarine;
+  border-bottom-left-radius: 10px;
+}
+
+.data-total > ion-row, .data-detail > ion-row {
+  padding: 2px;
+}
+
+.data-total > ion-row {
+  justify-content: end;
+}
+
+.data-detail {
+  background: pink;
+  border-bottom-right-radius: 10px;
+}
+
+.data-detail > ion-row {
+  justify-content: end;
+}

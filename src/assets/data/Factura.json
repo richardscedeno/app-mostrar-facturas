@@ -1,0 +1,46 @@
+[
+    {
+        "numFac":"000100",
+        "Cliente": {"cedula":"06023432","nombres":"Manuel Ortíz","direccion":"Salinas","telefono":"098324"},
+        "fechaFac":"2021/07/01",
+        "detalleFactura":[
+            { 
+                "Producto": {"codigo":"0001","nombre":"Televisor LG 55","precioU":"700","estado":true},
+                "cantidad":1,
+                "total":700
+            },
+            { 
+                "Producto": {"codigo":"0002","nombre":"Refrigeradora Mabe","precioU":"800","estado":true},
+                "cantidad":2,
+                "total":1600
+            } 
+        ],
+
+        "subTotalFac":2300,
+        "ivaFac":276,
+        "totalFac":2576
+    },
+    {
+        "numFac":"000101",
+        "Cliente":  {
+            "cedula":"24234324",
+            "nombres":"Rosa Sánchez",
+            "direccion":"Santa elena",
+            "telefono":"0932434"
+        },
+        "fechaFac":"2022/06/06",
+        "detalleFactura":[
+            { 
+                "Producto": {"codigo":"0001","nombre":"Televisor LG 55","precioU":"700","estado":true},
+                "cantidad":1,
+                "total":700
+            }
+              
+        ],
+
+        "subTotalFac":700,
+        "ivaFac":84,
+        "totalFac":784
+    }
+
+]

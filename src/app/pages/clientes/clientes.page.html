@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">Clientes</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" (click)="add()">
+      <ion-icon class="add_icon"  name="person-add"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header class="list_header">
+    <ion-label>CEDULA</ion-label>
+    <ion-label>NOMBRES</ion-label>
+    <ion-label>DIRECCION</ion-label>
+    <ion-label>TELEFONO</ion-label>
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of listClientes" class="list_clients">
+    <ion-label text-wrap>{{item.cedula}}</ion-label>
+    <ion-label text-wrap>{{item.nombres}}</ion-label>
+    <ion-label text-wrap>{{item.direccion}}</ion-label>
+    <ion-label text-wrap>{{item.telefono}}</ion-label>
+  </ion-item>
+
+</ion-content>
